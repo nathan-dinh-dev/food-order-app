@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import styles from "./HeaderCartButton.module.css";
-import CartIcon from "../Cart/CartIcon";
+import CartIcon from "../Cart/CartIcon.jsx";
 import { useContext } from "react";
-import CartContext from "../../store/cart-context";
+import CartContext from "../../store/cart-context.jsx";
 
 const HeaderCardButton = (props) => {
   const [isBump, setIsBump] = useState(false);

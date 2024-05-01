@@ -13,7 +13,11 @@ const Header = (props) => {
   return (
     <React.Fragment>
       <header className={styles.header}>
-        <h1>REACTMEALS</h1>
+        <div className={styles.brand}>
+          <img src="./brand.png" alt="brand" />
+          <h1>REACTMEALS</h1>
+        </div>
+
         <HeaderCardButton onClick={modalHandler}>Cart</HeaderCardButton>
       </header>
       <div className={styles["main-image"]}>
