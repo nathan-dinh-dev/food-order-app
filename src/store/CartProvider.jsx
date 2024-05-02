@@ -1,5 +1,5 @@
 import CartContext from "./cart-context.jsx";
-import { useReducer } from "react";
+import { useReducer, useState } from "react";
 
 const defaultCartState = {
   items: [],
@@ -47,6 +47,8 @@ const CartProvider = (props) => {
     defaultCartState
   );
 
+  const [currentUser, setCurrentUser] = useState(null);
+
   const addItemToCartHandler = (item) => {
     dispatchCartAction({ type: "ADD", item: item });
   };
@@ -55,11 +57,17 @@ const CartProvider = (props) => {
     dispatchCartAction({ type: "REMOVE", id: id });
   };
 
+  const setUserHandler = (user) => {
+    setCurrentUser(user);
+  };
+
   const cartContext = {
     item: cartState.items,
     totalAmount: cartState.totalAmount,
+    currentUser: currentUser,
     addItem: addItemToCartHandler,
     removeItem: removeItemFromCartHandler,
+    setCurrentUser: setUserHandler,
   };
 
   return (

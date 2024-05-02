@@ -24,13 +24,17 @@ const MealItem = (props) => {
         <div className={styles.description}>{props.meals.description}</div>
         <div className={styles.price}>{price}</div>
       </div>
-      <div>
-        <MealItemForm
-          id={props.meals.id}
-          meal={props.meals}
-          onAddToCart={addToCartHandler}
-        />
-      </div>
+      {cartCTX.currentUser ? (
+        <div>
+          <MealItemForm
+            id={props.meals.id}
+            meal={props.meals}
+            onAddToCart={addToCartHandler}
+          />
+        </div>
+      ) : (
+        ""
+      )}
     </li>
   );
 };

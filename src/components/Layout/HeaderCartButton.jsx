@@ -15,6 +15,7 @@ const HeaderCardButton = (props) => {
   const items = cartCTX.item;
 
   const classes = `${styles.button} ${isBump ? styles.bump : ""}`;
+
   useEffect(() => {
     if (items.length === 0) return;
 
@@ -28,6 +29,7 @@ const HeaderCardButton = (props) => {
       console.log("In clear");
     };
   }, [items]);
+
   return (
     <button className={classes} onClick={props.onClick}>
       <span className={styles.icon}>
