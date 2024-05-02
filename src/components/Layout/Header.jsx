@@ -25,7 +25,7 @@ const Header = (props) => {
       <header className={styles.header}>
         <div className={styles["header__brand"]}>
           <img src="./brand.png" alt="brand" />
-          <h1>REACTMEALS</h1>
+          <h1>Anna's Kitchen</h1>
         </div>
         <div className={styles["header__actions"]}>
           {ctx.currentUser && (
