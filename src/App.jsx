@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Header from "./components/Layout/Header.jsx";
-import Meals from "./components/Meals/Meals.jsx";
+import Meals from "./pages/Meal/Meals.jsx";
 import Cart from "./components/Cart/Cart.jsx";
 import CartProvider from "./store/CartProvider.jsx";
 import "./App.css";
